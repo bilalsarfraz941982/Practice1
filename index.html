@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="myFirstApp">
+    <head>
+        <script src="./angular.min.js"></script>
+        <script src="./App.js"></script>
+        <title>lets do it !!!!</title>
+    </head>
+    <body ng-controller="myFirstController">
+       <div>
+        <h2>{{name}}</h2>
+        <h2>{{name | uppercase }}</h2><br>
+        <h2>type any thing in the fiedl below and then press the button to make it upper case  :)</h2>
+        <input type="text" , ng-model="input" , placeholder="type here ....."><button ng-click="change()">Upper Case</button>
+        <h2>{{input}}</h2><br>
+        <h2>here is a picture of a pizza from our menu press the button below to change it to bruger...</h2>
+        <img ng-src="./Assets/{{mode}}.jpeg"><br>
+        <button ng-click="Changep()" style="height: 40px; width: 150px; border-radius: 5px;background-color:lightgrey;">Change</button>
+        <h2>{{info}}</h2>
+        <h2>{{ChangeName()}}</h2> <!-- here we use the custome filter via java script -->
+        <h2>{{directChangeN |ChangeN}}</h2> <!-- direct input of the custome filter in html --> 
+        <h1>{{An() | ANumbers :5:5}}</h1>
+        <h1>{{Soutput() | NMultiply:2:3}}</h1>
+       </div>
+    </body>
+</html>
